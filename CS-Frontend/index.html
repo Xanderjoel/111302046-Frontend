@@ -2,6 +2,86 @@
 <html>
 
 <head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request A Call back</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input, select {
+            margin-bottom: 16px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<div class="container">
+    <h2>Request Page</h2>
+    <form id="requestForm">
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName" required>
+        <label for="region">region:</label>
+        <select id="region" name="region" required>
+            <option value="Taiwan">Taiwan</option>
+            <option value="China">China</option>
+            <option value="US">US</option>
+            <option value="Canada">Canada</option>
+            <option value="Europe">Europe</option>
+            <option value="Africa">Africa</option>
+            <option value="South Africa">South Africa</option>
+        </select>
+        <label for="calender">calender:</label>
+        <h2>Select Date</h2>
+    <form>
+        <label for="selectedDate">Select a Date:</label>
+        <input type="date" id="selectedDate" name="selectedDate" required>
+
+        <button type="button" onclick="submitForm()">Submit</button>
+    </form>
+
+<script>
+    function submitForm() {
+        // You can add additional validation or processing logic here
+        var fullName = document.getElementById('fullName').value;
+        var region = document.getElementById('region').value;
+        var calendar = document.getElementById('calendar').value;
+
+        // Example: Redirect to the real page with the collected data
+        window.location.href = 'real_page.html?fullName=' + fullName + '&region=' + region + '&calendar=' + calendar;
+    }
+</script>
   <!-- Basic -->
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -30,6 +110,8 @@
 </head>
 
 <body>
+  <button onclick="window.location.href='https://www.youtube.com'"></button>
+  <a href="https://www.youtube.com" style="display: inline-block; padding: 10px 20px; background-color: #ff0000; color: #ffffff; text-decoration: none; font-weight: bold; border-radius: 5px;">YouTube</a>
   <div class="hero_area">
     <!-- header section strats -->
     <header class="header_section">
